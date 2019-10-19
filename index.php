@@ -23,6 +23,7 @@ $f3->route('GET /',
 			'Cache'=>
 				array(
 					'apc',
+					'apcu',
 					'memcache',
 					'memcached',
 					'redis',
@@ -51,7 +52,6 @@ $f3->route('GET /',
 				array('ldap','pdo'),
 			'Bcrypt'=>
 				array(
-					'mcrypt',
 					'openssl'
 				),
 			'Image'=>
