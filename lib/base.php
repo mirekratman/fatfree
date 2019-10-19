@@ -1839,7 +1839,7 @@ final class Base extends Prefab implements ArrayAccess {
 					'(?<lval>[^\h\r\n;].*?)\h*=\h*'.
 					'(?<rval>(?:\\\\\h*\r?\n|.+?)*)'.
 				')(?=\r?\n|$)/',
-				$this->read($file),
+                $this->read($this->hive()['ROOT'] . $file),
 				$matches,PREG_SET_ORDER);
 			if ($matches) {
 				$sec='globals';
